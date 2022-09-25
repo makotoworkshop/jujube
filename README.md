@@ -1,3 +1,19 @@
+### Makoto, 25 Septembre 2022 :
+
+J'ai forké le logiciel pour l'étudier et apprendre.
+
+Je m'amuse à modifier l'interface graphique pour le personnaliser un peu…
+
+.
+
+.
+
+.
+
+
+
+
+### Stepland, 23 May 2020 :
 # jujube
 jujube will be a cross-platform FLOSS jubeat simulator,
 
