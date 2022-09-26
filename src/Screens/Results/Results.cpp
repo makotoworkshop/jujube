@@ -88,7 +88,7 @@ namespace Results {
             // Draw score
             sf::Text score_text;
             score_text.setFont(shared.fallback_font.black);
-            score_text.setFillColor(sf::Color(29, 98, 226));
+            score_text.setFillColor(sf::Color(255, 255, 255));    // Makoto : (29, 98, 226) changé pour blanc 
             score_text.setString(std::to_string(final_score));
             score_text.setCharacterSize(static_cast<unsigned int>(45.f/768.f*get_screen_width()));
             Toolkit::set_local_origin_normalized(score_text, 1.f, 1.f);
@@ -101,7 +101,7 @@ namespace Results {
             // Draw Rating
             sf::Text rating_text;
             rating_text.setFont(shared.fallback_font.black);
-            rating_text.setFillColor(sf::Color(29, 98, 226));
+            rating_text.setFillColor(sf::Color(255, 255, 255));    // Makoto affichage de l'appréciation : (29, 98, 226) changé pour blanc 
             rating_text.setString(Data::rating_to_string.at(final_rating));
             rating_text.setCharacterSize(static_cast<unsigned int>(0.5f*get_panel_size()));
             Toolkit::set_local_origin_normalized(rating_text, 0.5f, 0.5f);
@@ -114,7 +114,7 @@ namespace Results {
             // Draw Judgement Breakdown
             sf::Text judgements;
             judgements.setFont(shared.fallback_font.black);
-            judgements.setFillColor(sf::Color(29, 98, 226));
+            judgements.setFillColor(sf::Color(255, 255, 255));    // Makoto affichage des résultas :  (29, 98, 226) changé pour blanc 
             std::string judgement_to_string = (
                 "Perfect: " + std::to_string(score.get_judgement_counts(Data::Judgement::Perfect)) + "\n" +
                 "Great: " + std::to_string(score.get_judgement_counts(Data::Judgement::Great)) + "\n" +
