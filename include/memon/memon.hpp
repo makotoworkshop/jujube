@@ -11,6 +11,7 @@ https://github.com/Stepland/memon
 #include <cassert>
 #include <set>
 #include <vector>
+#include <optional>  // Makoto : Ajout sinon la compilation plante
 
 #include "json.hpp"
 
