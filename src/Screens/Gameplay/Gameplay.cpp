@@ -142,7 +142,7 @@ namespace Gameplay {
                     break;
                 }
             }
-            window.clear(sf::Color(7, 23, 53));
+            window.clear(sf::Color(7, 15, 12)); // Makoto : couleur de fond en cours de chanson (7, 23, 53)
             ln_tail_layer.clear(sf::Color::Transparent);
             marker_layer.clear(sf::Color::Transparent);
 
@@ -196,16 +196,20 @@ namespace Gameplay {
 
 
             // Draw Combo
-            if (combo >= 4) {
+            if (combo >= 1) {   // Makoto : mise à 1 au lieu de 4
                 sf::Text combo_text;
                 combo_text.setFont(shared.fallback_font.black);
-                combo_text.setFillColor(sf::Color(18, 59, 135));
+                combo_text.setFillColor(sf::Color(255, 255, 255));    // Makoto : texte des combos (18, 59, 135) changé pour blanc
+                combo_text.setOutlineColor(sf::Color(0, 0, 0));    // Makoto : ajout contour de texte
+                combo_text.setOutlineThickness(3);                  // Makoto : ajout épaisseur du contour de texte
+                combo_text.setLetterSpacing (3);                    // Makoto : ajout écartement entre les lettres
+          //      combo_text.setScale(2,2);	                    // Makoto : grossisement du texte
                 combo_text.setString(std::to_string(combo));
-                combo_text.setCharacterSize(static_cast<unsigned int>(1.5*get_panel_step()));
+                combo_text.setCharacterSize(static_cast<unsigned int>(1.6*get_panel_step()));
                 Toolkit::set_local_origin_normalized(combo_text, 0.5f, 0.5f);
                 combo_text.setPosition(
                     get_ribbon_x()+get_ribbon_size()*0.5f,
-                    get_ribbon_y()+get_ribbon_size()*0.5f
+                    get_ribbon_y()+get_ribbon_size()*0.44f       // Makoto : texte un peu plus haut
                 );
                 window.draw(combo_text);
             }
@@ -214,7 +218,7 @@ namespace Gameplay {
             auto current_score = score.get_score();
             sf::Text score_text;
             score_text.setFont(shared.fallback_font.black);
-            score_text.setFillColor(sf::Color(29, 98, 226));
+            score_text.setFillColor(sf::Color(255, 255, 255));    // Makoto : texte du score (29, 98, 226) changé pour blanc
             score_text.setString(std::to_string(current_score));
             score_text.setCharacterSize(static_cast<unsigned int>(45.f/768.f*get_screen_width()));
             Toolkit::set_local_origin_normalized(score_text, 1.f, 1.f);
