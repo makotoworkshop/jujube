@@ -1,0 +1,29 @@
+ffmpeg -i festo.mkv festo%d.png
+
+jujube :
+approach + 5 phases :
+
+PERFECT
+GREAT
+GOOD
+POOR
+MISS
+
+
+jubeat :
+
+PERFECT
+GREAT
+GOOD
+POOR
+MISS
+
+
+Capture démo jubeat :
+
+Early = approach + poor
+Late = approach + poor
+Good Bleu = approach + good
+Good Vert = approach + great
+Miss = approach + miss
+Perfect = approach + perfect
