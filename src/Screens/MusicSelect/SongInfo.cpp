@@ -17,7 +17,7 @@ namespace MusicSelect {
     {
         m_cover_fallback.setFillColor(sf::Color::Transparent);
         m_cover_fallback.setOutlineThickness(1.f);
-        m_cover_fallback.setOutlineColor(sf::Color::White);
+        m_cover_fallback.setOutlineColor(sf::Color::White); // White  Makoto : changemenent couleur contour cover
     }
 
     void BigCover::draw(sf::RenderTarget& target, sf::RenderStates states) const {
@@ -59,8 +59,9 @@ namespace MusicSelect {
 
     void SongInfo::draw(sf::RenderTarget& target, sf::RenderStates states) const {
         states.transform *= getTransform();
-        m_big_cover.setOrigin(m_big_cover.get_size()*0.5f, 0.f);
-        m_big_cover.setPosition(get_big_cover_x(), get_big_cover_y());
+        m_big_cover.setOrigin(m_big_cover.get_size()*0.5f, 0.f);  // *0.5f, 0.f  
+ //       m_big_cover.setPosition(get_big_cover_x(), get_big_cover_y());
+        m_big_cover.setPosition(get_big_cover_x()+(180), get_big_cover_y()+(30));  // Makoto : position du BigCover Album
         target.draw(m_big_cover, states);
         draw_song_title(target, states);
         draw_big_level(target, states);
@@ -92,8 +93,8 @@ namespace MusicSelect {
             }
             song_title_label.setFillColor(sf::Color::White);
             song_title_label.setPosition(
-                get_big_cover_x() - m_big_cover.get_size()/2.f,
-                get_big_cover_y() + m_big_cover.get_size() + 0.01f*get_screen_width()
+                get_big_cover_x() - m_big_cover.get_size()/0.9f,     // 2.f  Makoto : position du grand titre
+                get_big_cover_y() + m_big_cover.get_size() + (-0.12f)*get_screen_width()   // 0.01f*
             );
             target.draw(song_title_label, states);
         }
@@ -113,8 +114,8 @@ namespace MusicSelect {
             }
             song_artist_label.setFillColor(sf::Color::White);
             song_artist_label.setPosition(
-                get_big_cover_x() - m_big_cover.get_size()/2.f,
-                get_big_cover_y() + m_big_cover.get_size() + 0.04f*get_screen_width()
+                get_big_cover_x() - m_big_cover.get_size()/0.9f,     // 2.f  Makoto : position du grand artiste
+                get_big_cover_y() + m_big_cover.get_size() + (-0.09f)*get_screen_width()   //  0.04f*
             );
             target.draw(song_artist_label, states);
         }
@@ -135,7 +136,8 @@ namespace MusicSelect {
             static_cast<unsigned int>(12.f/768.f*get_screen_width())
         };
         Toolkit::set_origin_normalized(level_label, 0.5f, 0.f);
-        level_label.setPosition(get_big_level_x(), get_big_level_y());
+ //       level_label.setPosition(get_big_level_x(), get_big_level_y());
+        level_label.setPosition(get_big_level_x()+(-510.f/1360.f*get_screen_height()), get_big_level_y()+(115.f/768.f*get_screen_width()));      // Makoto : position du petit texte LEVEL
         level_label.setFillColor(sf::Color::White);
         target.draw(level_label, states);
         
@@ -144,8 +146,9 @@ namespace MusicSelect {
             shared.fallback_font.black,
             static_cast<unsigned int>(130.f/768.f*get_screen_width())
         };
-        Toolkit::set_origin_normalized(level_number_label, 0.5f, 0.f);
-        level_number_label.setPosition(get_big_level_x(), get_big_level_y()+(30.f/768.f*get_screen_width()));
+        Toolkit::set_origin_normalized(level_number_label, 0.5f, 0.f);          // Makoto : position texte Level number
+ //       level_number_label.setPosition(get_big_level_x(), get_big_level_y()+(30.f/768.f*get_screen_width()));
+        level_number_label.setPosition(get_big_level_x()+(-420.f/1360.f*get_screen_height()), get_big_level_y()+(65.f/768.f*get_screen_width()));
         level_number_label.setFillColor(sf::Color::White);
         target.draw(level_number_label, states);
 
@@ -163,8 +166,9 @@ namespace MusicSelect {
             shared.fallback_font.medium,
             static_cast<unsigned int>(20.f/768.f*get_screen_width())
         };
-        Toolkit::set_origin_normalized_no_position(chart_label, 0.5f, 0.f);
-        chart_label.setPosition(get_big_level_x(), get_big_level_y()+(145.f/768.f*get_screen_width()));
+        Toolkit::set_origin_normalized_no_position(chart_label, 0.5f, 0.f);     // Makoto : position texte level basic/adv/Exp
+ //       chart_label.setPosition(get_big_level_x(), get_big_level_y()+(145.f/768.f*get_screen_width()));
+        chart_label.setPosition(get_big_level_x()+(-560.f/1360.f*get_screen_height()), get_big_level_y()+(140.f/768.f*get_screen_width()));
         chart_label.setFillColor(shared.get_chart_color(selected_chart->difficulty));
         target.draw(chart_label, states);
     }

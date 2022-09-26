@@ -90,11 +90,11 @@ namespace MusicSelect {
 
     void Ribbon::click_on(const Input::Button& button) {
         switch (button) {
-        case Input::Button::B13: // Left Arrow
-            move_left();
+        case Input::Button::B13: // Left Arrow. Makoto : inversion du sens des flêches
+            move_right();        // move_left();
             break;
-        case Input::Button::B14: // Right Arrow
-            move_right();
+        case Input::Button::B14: // Right Arrow. Makoto : inversion du sens des flêches
+            move_left();         // move_right();
             break;
         default:
             get_panel_under_button(button)->click(*this, button);
