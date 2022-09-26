@@ -1,3 +1,31 @@
+Haut d'écran :
+- Changer position pochette [Screens/MusicSelect/SongInfo.cpp]
+- Changer position Titre et artiste [Screens/MusicSelect/SongInfo.cpp]
+- Changer position level [Screens/MusicSelect/SongInfo.cpp]
+
+Panel :
+- Changer taille et position des titres des songs sur les vignettes
+- Changer couleur fond d'écran ingame [Screens/Gameplay/Gameplay.cpp]
+- Changer la police des combos [Screens/Gameplay/Gameplay.cpp]
+- Changer la couleur des combos [Screens/Gameplay/Gameplay.cpp]
+- Changer le compteur de départ des combos [Screens/Gameplay/Gameplay.cpp]
+- Changer la position des combos [Screens/Gameplay/Gameplay.cpp]
+- Changer l'écartement des caratères des combos [Screens/Gameplay/Gameplay.cpp]
+- Changer la couleur du score ingame [Screens/Gameplay/Gameplay.cpp]
+- Changer la couleur du score résultat [Screens/Results/Results.cpp]
+- Changer le sens des fléches pour faire défiler les songs [Screens/MusicSelect/Ribbon.cpp]
+- Fond animé qui suit les BPM
+- Combo qui bumpe à chaque note touchée, avec ombre portée
+- Preview des premières notes avec délais de 6 secondes avant départ de la song
+- Full Combo !
+
+
+Marker :
+- Changer la résolution des vignettes des markers (plus grande comme jubeat)
+- Vérifier/Changer le nombre de phases d'animations des marker MISS et POOR (pour avoir 16 comme sur jubeat)
+- Song de test pour faire réglages avec clap
+
+
 # v0.2.0
 ## Misc
 - THE THEME SYSTEM HOLY SHIT
